@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Best blog Ever</h1>
+    <p>This blog is powered by Markdown</p>
+    <a href="/articles/new">Add new article</a>
+    <div class="articles-container">
+        <% articles.forEach(article=>{ %>
+            <div class="articles-card">
+                <div class="h2">
+                    <%= article.title %>
+                </div>
+                <p class="date">
+                    <%= article.created_at.toLocaleDateString() %>
+                </p>
+                <p class="body">
+                    <%= article.text %>
+                </p>
+                <p class="author">
+                    <%= article.author %>
+                </p>
+                <div>
+                    <a href=<%="/articles/" +article.id %> >View</a>
+                    <a href=<%="/articles/edit/" +article.id %> >Edit</a>
+                    <a href=<%="/articles/delete/" +article.id %> >Delete</a>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>

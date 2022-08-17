@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new article</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="view-article-container">
+        <div class="view-article">
+            <h2>View Article</h2>
+            <div>
+                <p>
+                    <strong>Title: </strong>
+                    <%= article.title %>
+                </p>
+                <p>
+                    <strong>Date Published: </strong>
+                    <%= article.created_at %>
+                </p>
+                <p>
+                    <strong>Body: </strong>
+                    <%= article.text %>
+                </p>
+                <p>
+                    <strong>Author: </strong>
+                    <%= article.author %>
+                </p>
+                <a href="/">Go back home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

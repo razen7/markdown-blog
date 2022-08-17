@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new article</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="add-article-container">
+        <div class="add-article">
+            <h2>Add New Article</h2>
+            <div>
+                <form action="/articles/new" method="post">
+                    <input type="text" name="title" placeholder="Title">
+                    <textarea name="content" placeholder="Body" rows="5"></textarea>
+                    <input type="author" name="author" placeholder="Author">
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
